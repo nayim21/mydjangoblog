@@ -8,7 +8,7 @@
       <h1>article list  </h1>
       {%  for aa in xartc  %}
       <h2>
-        <a href="#">
+        <a href = "{% url  'articles:detail'  slug=aa.slug   %}">
           {{ aa.title }}
         </a>
       </h2>
