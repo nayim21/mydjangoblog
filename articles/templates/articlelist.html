@@ -1,0 +1,22 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>article list</title>
+    </head>
+    <body>
+      <h1>article list  </h1>
+      {%  for aa in xartc  %}
+      <h2>
+        <a href="#">
+          {{ aa.title }}
+        </a>
+      </h2>
+          <p>
+            {{ aa.body }}
+            </p>
+      {% endfor %}
+
+<p> tozihat article list </p>
+    </body>
+  </html>
