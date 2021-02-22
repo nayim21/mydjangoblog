@@ -2,10 +2,12 @@
 
 {% block content %}
   <h2>Log in to My Site</h2>
-  <h2>sign up</h2>
-  <form   class="site-form" action ="/accounts/login" method="post">
-    {{ form }}
+  <form   class="" action ="/accounts/login" method="post">
+    {{form}}
     {% csrf_token %}
-    <<input type="submit" name="" value="submit!!!">
+    {% if request.Get.next %}
+    <input type="hidden" name="next" value="{{request.Get.next}}">
+    {% endif %}
+    <input type="submit" value="log in !!!">
   </form>
   {% endblock %}

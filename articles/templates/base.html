@@ -10,8 +10,13 @@
    </title>
  </head>
    <body>
+     <form class="logout-link" action="/accounts/logout" method="post">
+       {% csrf_token %}
+       <button type="submit"> log out </button>
+     </form>
+
      {% block content %}
-     
+
      {% endblock %}
     </body>
 </html>

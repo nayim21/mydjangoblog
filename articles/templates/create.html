@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="create-article" >
+<h1> CREATE ARTICLE !!! </h1>
+ <form class="site-form" action="/articles/create" method="post" >
+   {{form}}
+   {% csrf_token %}
+   <input type="submit" name="" value="create">
+ </form>
+</div>
+{%endblock%}
